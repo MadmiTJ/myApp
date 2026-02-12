@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tj">
+<head>
+    <meta charset="UTF-8">
+    <title data-key="title">Тест</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="topbar">
+    <span class="back-icon" onclick="goBack()">←</span>
+    <span class="topbar-title" data-key="aboutTitle">Оиди барнома</span>
+</div>
+<div class="main-screen">
+    <div class="main-card">
+
+        <h2 data-key="title">Тест</h2>
+        <p data-key="desc">Шумораи саволҳоро интихоб кунед</p>
+
+        <div class="numbers-grid">
+    <button class="num-btn">5</button>
+    <button class="num-btn">10</button>
+    <button class="num-btn">15</button>
+    <button class="num-btn">20</button>
+    <button class="num-btn">25</button>
+    <button class="num-btn">30</button>
+</div>
+
+       <button id="startTestBtn" class="main-btn" onclick="startQuiz()" data-key="start">
+           Оғози тестҳо
+       </button>
+
+    </div>
+</div>
+<script>
+function startQuiz(){
+    let count = document.getElementById("questionCount").value;
+    localStorage.setItem("quizCount", count);
+    window.location.href = "quiz.html";
+}
+</script>
+
+<script src="test.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    
+</head>
+
+<body>
+  <div class="topbar">
+    <span class="back-icon" onclick="goBack()">←</span>
+    <span class="topbar-title" data-key="aboutTitlel">Интихоби тестҳо</span>
+</div>
+
+<div class="quiz-container">
+
+    <!-- Progress -->
+    <div class="progress" id="questionNumber">
+        Саволи 1 аз 5
+    </div>
+
+    <!-- Question -->
+    <div class="question-box" id="questionText">
+        Савол дар ин ҷо мебарояд
+    </div>
+
+    <!-- Answers -->
+    <div class="options" id="answersBox">
+        <!-- Вариантҳо аз JS меоянд -->
+    </div>
+    <div id="resultBox" class="result-box"></div>
+
+    <!-- Next Button -->
+    <button id="nextBtn" class="main-btn" style="display:none;">
+        Давом додан
+    </button>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+body{
+    height:100vh;
+    min-height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+.quiz-container{
+  
+    width:90%;
+    margin: 0 auto;
+    max-width:380px;
+    overflow: hidden;
+    padding:30px 20px;
+    border-radius:25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.progress{
+    text-align:center;
+    margin-bottom:15px;
+    opacity:0.8;
+}
+
+.question-box{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.options button{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    transition:0.3s;
+}
+
+.options button:hover{
+    background:rgba(255,255,255,0.3);
+}
+
+.main-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:600;
+    background:white;
+    color:#1e3c45;
+    cursor:pointer;
+}
+.result-box {
+    text-align: left;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.result-box h2 {
+    margin-bottom: 10px;
+}
+
+.correct-answer {
+    color: #4CAF50;
+}
+
+.wrong-answer {
+    color: #ff5252;
+}
+
+.result-box {
+  max-height: 540px;
+  overflow-y: auto;
+  margin-top: 15px;
+}
+.main-btn {
+  position: sticky;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  bottom: 0;
+}
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 15px;
+    margin: 15px;
+    border-radius:20px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.topbar-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.back-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}

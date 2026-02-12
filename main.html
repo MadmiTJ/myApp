@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-key="title">Маркази тести Исломӣ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+ <div class="topbar">
+    <span class="back-icon" onclick="goBack()">←</span>
+    <span class="topbar-title" data-key="aboutTitle">Оиди барнома</span>
+
+    <button class="info-btn" onclick="openInfo()">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            <line x1="12" y1="10" x2="12" y2="16" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="7" r="1.5" fill="white"/>
+        </svg>
+    </button>
+</div>
+
+<div id="exitModal" class="modal">
+    <div class="modal-card">
+        <p class="modal-text">
+            Шумо рози ҳастед бароед аз тест?
+        </p>
+
+        <div class="modal-buttons">
+            <button class="btn yes" onclick="exitApp()">Қабул</button>
+            <button class="btn no" onclick="closeModal()">Не</button>
+        </div>
+    </div>
+</div>
+
+<div class="main-container">
+  
+  <div class="main-screen">
+    <div class="main-card">
+        <h1 data-key="title">Маркази тести Исломӣ</h1>
+        <p data-key="subtitle">Омӯзиши худро санҷ</p>
+
+        <button class="main-btn start-btn"data-key="start">Оғози тест</button>
+        
+        <button id="openLang" class="lang-btn">
+           <img id="langBtnFlag" src="flags/tj.png" class="flag-circle">
+           <span id="langBtnText">Тоҷикӣ</span>
+        </button>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+<!-- Language Modal -->
+<!-- LANGUAGE MODAL -->
+<div id="langModal" class="lang-modal">
+  <div class="lang-box">
+    <h3 data-key="editlang">Интихоби забон</h3>
+
+    <div class="lang-options">
+      <div class="lang-item" data-lang="tj">
+        <span class="flag">🇹🇯</span>
+        Тоҷикӣ
+      </div>
+
+      <div class="lang-item" data-lang="ru">
+        <span class="flag">🇷🇺</span>
+        Русский
+      </div>
+
+      <div class="lang-item" data-lang="fa">
+        <span class="flag">🇮🇷</span>
+        فارسی
+      </div>
+
+      <div class="lang-item" data-lang="ar">
+        <span class="flag">🇸🇦</span>
+        العربية
+      </div>
+    </div>
+
+    <button id="confirmLang" data-key="confirm">Қабул</button>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>
