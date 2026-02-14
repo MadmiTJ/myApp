@@ -17,8 +17,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Cordova
-        run: npm install -g cordova
+      - name: Install Cordova and cordova-res
+        run: |
+          npm install -g cordova
+          npm install -g cordova-res
 
       - name: Prepare Cordova project
         run: |
@@ -30,6 +32,8 @@ jobs:
           cp *.jpg myApp/www/ || true
           cd myApp
           cordova platform add android
+          # Сохтани иконҳо аз school.jpg
+          cordova-res android --skip-config --copy
 
       - name: Build APK (Debug)
         run: |
