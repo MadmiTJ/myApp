@@ -62,19 +62,38 @@ function goBack() {
 }
 
 // тугмаи оғоз
+// Функсия барои намоиш додани модал
+function showModal(message) {
+    const modal = document.getElementById("modal");
+    const messageElement = document.getElementById("modal-message");
+    const closeBtn = document.getElementById("closeBtn");
+    const okBtn = document.getElementById("okBtn");
+
+    messageElement.textContent = message; // Массажи огоҳӣ
+    modal.style.display = "flex"; // Намудон кардани модал
+
+    // Вақте ки тугмаи "Ok" пахш мешавад
+    okBtn.addEventListener("click", () => {
+        modal.style.display = "none"; // Пӯшида кардан
+    });
+
+    // Вақте ки тугмаи хомӯш кардани модал пахш мешавад
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none"; // Пӯшида кардан
+    });
+}
+
+// Тугмаи "Офозӣ тест" пахш мешавад
 const startBtn = document.getElementById("startTestBtn");
-
 startBtn.addEventListener("click", () => {
-
     if (!selectedCount) {
-        alert("Лутфан аввал шумораи саволҳоро интихоб кунед");
+        showModal("Лутфан аввал шумораи саволҳоро интихоб кунед!"); // Иваз кардани alert бо модал
         return;
     }
 
-    // нигоҳ доштани шумора
+    // Шумориши саволҳо
     localStorage.setItem("quizCount", selectedCount);
 
-    // гузаштан ба саҳифаи quiz
+    // Рафта ба саҳифа quiz
     window.location.href = "quiz.html";
 });
-
