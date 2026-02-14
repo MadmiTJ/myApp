@@ -32,8 +32,8 @@ jobs:
           cd myApp
           cordova build android
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: myApp-apk
-          path: myApp/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+          name: my-artifact
+          path: path/to/files
