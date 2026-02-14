@@ -32,7 +32,7 @@ jobs:
           cp *.jpg myApp/www/ || true
           cd myApp
           cordova platform add android
-          # Сохтани иконҳо аз icon.png
+          # Сохтани иконҳо аз resources/icon.png
           cordova-res android --skip-config --copy
 
       - name: Build APK (Debug)
