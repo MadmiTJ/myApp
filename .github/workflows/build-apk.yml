@@ -20,10 +20,12 @@ jobs:
       - name: Install Cordova
         run: npm install -g cordova
 
-      - name: Create Cordova project
+      # Агар лоиҳаат аллакай Cordova бошад, ин қадам лозим нест.
+      # Агар аз нав сохтан хоҳӣ, танҳо файли вебро нусха кун.
+      - name: Prepare Cordova project
         run: |
           cordova create myApp com.example.myapp MyApp
-          cp -r * myApp/www/
+          cp -r index.html css js myApp/www/
           cd myApp
           cordova platform add android
 
@@ -35,5 +37,5 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
-          path: path/to/files
+          name: cordova-apk
+          path: myApp/platforms/android/app/build/outputs/apk/debug/app-debug.apk
